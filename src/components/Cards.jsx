@@ -3,6 +3,9 @@ import Image1 from "../assets/canada.jpg";
 import Image2 from "../assets/usa.jpg";
 import Image3 from "../assets/españa.jpg";
 import Image4 from "../assets/rusia.jpg";
+import "material-symbols"
+import "../styles.css";
+
 
 const items = [
     {
@@ -40,9 +43,9 @@ export default function Cards() {
                  }
                  onClick={() => setActive(index)}
              >
-                 <img src={Cards.image}/> 
+                 <img src={card.image}/> 
                  <div className="content">
-                    <span>
+                    <span className="material-symbols-outlined">
                         photo_camera
                     </span>
                     <div>
