@@ -28,10 +28,11 @@ const items = [
 ]
 
 export default function Cards() {
+    const [active, setActive] = useState(0);
     return (
         <>
         <section>
-            {items.map((card, index)) => (
+            {items.map((card, index) => (
                  <article key={index}
                  className={
                      active === index ? "active" : ""
@@ -48,14 +49,11 @@ export default function Cards() {
                         <h2>{card.header}</h2>
                         <p>{card.text}</p>
                     </div>
-
                  </div>
-
-            )
-
-
-            }
+                </article>
+            ))}
         </section>
         </>
+
     )
 }
